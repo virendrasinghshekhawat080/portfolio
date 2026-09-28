@@ -1,0 +1,38 @@
+/* Single floating mic + accessible conversation drawer. Edit only this file for assistant UI. */
+.agent-dock { position:fixed;right:clamp(12px,2.3vw,28px);bottom:clamp(12px,2vw,24px);z-index:180;display:flex;flex-direction:column;align-items:flex-end;gap:8px;pointer-events:none }
+.agent-dock>*{pointer-events:auto}
+.agent-mic{height:50px;width:50px;border:1px solid #9fffea9c;border-radius:50%;display:grid;place-items:center;color:#081324;background:linear-gradient(135deg,#66ffe4,#75a6ff 54%,#b48bff);box-shadow:0 0 0 7px #68e7e614,0 14px 44px #2dbbb56d;cursor:pointer;position:relative;isolation:isolate;transition:transform .3s ease,box-shadow .3s ease}
+.agent-mic svg{width:23px;height:23px;z-index:1}.agent-mic:hover{transform:translateY(-5px) scale(1.06);box-shadow:0 0 0 9px #68e7e622,0 16px 48px #2dbbb588}
+.agent-mic:focus-visible,.agent-dock button:focus-visible,.agent-dock input:focus-visible,.agent-dock select:focus-visible,.agent-link:focus-visible{outline:3px solid #8efbe6;outline-offset:3px}
+.agent-mic-ring{position:absolute;inset:-7px;border:1px solid #80f8da6b;border-radius:50%;animation:agent-ring 2.4s ease-in-out infinite;pointer-events:none}
+.agent-mic.active {background:linear-gradient(135deg,#ffb1ab,#f0b5e6);box-shadow:0 0 0 8px #ef96db24,0 18px 55px #f09cbe80}
+.agent-mic.active .agent-mic-ring{animation:agent-ring 1.25s ease-in-out infinite}
+.agent-panel {width:min(292px,calc(100vw - 24px));height:min(392px,calc(100dvh - 92px));min-height:225px;display:flex;flex-direction:column;color:#eaf7ff;background:linear-gradient(162deg,#14223e 0%,#0c1529 63%,#10132e 100%);border:1px solid #a7b7f648;border-radius:24px;overflow:hidden;box-shadow:0 30px 95px #000b22ad,0 0 0 1px #5af5e71a;animation:agent-pop .36s cubic-bezier(.2,.8,.2,1) both}
+.agent-head{display:flex;align-items:center;gap:12px;padding:9px 11px;border-bottom:1px solid #c8e1fb20;background:linear-gradient(90deg,#173a4e91,#19234b69)}
+.agent-avatar{height:30px;width:30px;flex:0 0 30px;display:grid;place-items:center;border-radius:13px;color:#0c1e30;background:linear-gradient(135deg,#68e7ce,#8ab5ff)}.agent-avatar svg{width:22px;height:22px}
+.agent-head>div{min-width:0;flex:1;display:grid;gap:4px}.agent-head strong{font:700 12px 'Space Grotesk',sans-serif}.agent-head small{font-size:9px;color:#a6dbd4}.agent-close{background:#ffffff13;color:#f8fdff;border:1px solid #ffffff24;width:31px;height:31px;border-radius:50%;font-size:22px;cursor:pointer}
+.agent-backend{padding:5px 11px;background:#0a192d77;color:#ffe4ab;font-size:10.5px;line-height:1.5}.agent-backend.status-ready{color:#84f3be}
+.agent-log{min-height:48px;flex:1;overflow:auto;scrollbar-width:thin;padding:8px 10px;display:flex;flex-direction:column;gap:7px;overscroll-behavior:contain}
+.agent-intro{padding:8px;border:1px dashed #a5c8ee48;background:#d9f3ff09;color:#b9ccdb;border-radius:15px;line-height:1.6;font-size:12px}
+.agent-message{padding:7px 9px;border-radius:12px;border:1px solid #ffffff14;max-width:91%;min-width:0;overflow-wrap:anywhere;animation:agent-message .3s ease both}.agent-message p{white-space:pre-wrap;font-size:12px;line-height:1.65;margin:4px 0 0}.agent-message small{font-size:10px;color:#96eeda;font-weight:700}.agent-message.user{align-self:flex-end;background:#34558190;border-radius:16px 16px 4px 16px}.agent-message.assistant{align-self:flex-start;background:#17283ecb;border-radius:16px 16px 16px 4px}
+.agent-hearing{padding:5px 9px;color:#b7d0e8;font-size:11px;line-height:1.55;background:#111f35;display:flex;gap:8px;align-items:center;max-height:46px;overflow:auto}.agent-hearing.listening{color:#80eed0}.agent-dot{width:7px;height:7px;background:#a6a9c9;border-radius:50%;flex:0 0 auto}.agent-hearing.listening .agent-dot{background:#74f4c9;animation:agent-ring 1.3s ease-in-out infinite}
+.agent-type{margin:6px 9px 0;display:flex;gap:8px;align-items:center;padding:4px 5px 4px 12px;background:#0b172b;border:1px solid #84b5d34f;border-radius:13px}
+.agent-type input{background:transparent;border:0;outline:0;color:#fff;min-width:0;flex:1;padding:6px 0;font-size:11px}.agent-type input::placeholder{color:#93a6b9}
+.agent-type button{width:30px;height:30px;border-radius:10px;border:0;color:#041629;background:linear-gradient(130deg,#67eed3,#8cafff);cursor:pointer}.agent-type button:disabled{opacity:.45;cursor:not-allowed}
+.agent-actions{display:flex;gap:7px;align-items:center;padding:6px 9px}.agent-actions button{background:#c5e9ff15;border:1px solid #c5e9ff2c;color:#d0eff4;border-radius:9px;padding:6px 7px;font-size:10px;white-space:nowrap;cursor:pointer}.agent-actions label{flex:1;min-width:0;color:#a6b7cd;display:flex;flex-direction:column;gap:3px;font-size:10px}.agent-actions select{background:#1b2b47;color:#fff;border:1px solid #c8d6e32f;border-radius:7px;max-width:104px;min-height:28px;font-size:10px}
+.agent-example{display:flex;gap:5px;padding:0 13px 10px;overflow-x:auto}.agent-example button{white-space:nowrap;border-radius:50px;border:1px solid #a4d8de36;color:#b7e7e4;background:#ffffff0a;padding:6px 9px;font-size:10px;cursor:pointer}
+.agent-link{margin:7px 13px 0;padding:10px 13px;display:block;text-decoration:none;text-align:center;color:#062333;background:#7cecd2;border-radius:10px;font-size:12px;font-weight:700}
+.agent-disclaimer{padding:7px 13px 12px;font-size:10px;line-height:1.55;color:#93a9bf;max-height:61px;overflow:auto}
+@keyframes agent-pop{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes agent-ring{50%{transform:scale(1.09);opacity:.52}}
+@keyframes agent-message{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:480px){.agent-dock{right:10px;bottom:10px}.agent-mic{height:46px;width:46px}.agent-panel{border-radius:16px;width:min(278px,calc(100vw - 20px));height:min(365px,calc(100dvh - 78px))}.agent-head{padding:8px}.agent-actions{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.agent-dock *, .agent-dock *::before,.agent-dock *::after{animation:none!important;transition:none!important}}
+
+/* Compact dock refinements: popup only occupies a small lower-right corner. */
+.agent-backend,.agent-extension-status{font-size:9px;line-height:1.25;padding:4px 10px}
+.agent-example[hidden],.agent-disclaimer[hidden]{display:none!important}
+.agent-sources{display:flex;flex-direction:column;gap:4px;margin-top:6px}
+.agent-sources a{color:#84f3be;font-size:10px;overflow-wrap:anywhere;text-decoration:underline}
+.agent-head small{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.agent-dock:not(:has(.agent-panel)){width:auto;height:auto}

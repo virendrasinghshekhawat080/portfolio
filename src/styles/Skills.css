@@ -1,0 +1,91 @@
+/* Skills: edit this file to customize this section. */
+
+.skill-group:hover {
+  transform: translateY(-7px);
+  border-color: rgba(88,225,203,.35);
+}
+
+.skills {
+  background: linear-gradient(180deg,rgba(18,29,54,.47),rgba(8,12,28,0));
+}
+
+.skill-layout {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.skill-group {
+  padding: 27px;
+  border-radius: 18px;
+  transition: transform .3s,border-color .3s;
+}
+
+.skill-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+  margin-bottom: 21px;
+}
+
+.skill-head span {
+  font: 12px monospace;
+  color: var(--aqua);
+}
+
+.skill-head h3 {
+  font-family: "Space Grotesk";
+  margin: 0;
+  font-size: 18px;
+}
+
+.skill-list {
+  display: flex;
+  align-content: start;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-height: 127px;
+}
+
+.skill-list span {
+  padding: 9px 11px;
+  background: rgba(112,136,194,.09);
+  border: 1px solid rgba(169,188,237,.11);
+  border-radius: 8px;
+  color: #bfcde8;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background .25s,transform .25s;
+}
+
+.skill-list span:hover {
+  background: rgba(80,225,204,.14);
+  transform: translateY(-2px);
+}
+
+.skill-group.reveal.visible:hover {
+  transform: translateY(-7px);
+}
+
+@media (max-width:760px) {
+  .skill-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:760px) {
+  .skill-list {
+    min-height: auto;
+  }
+}
+
+.skill-group {
+  transition: border-color .35s,box-shadow .35s,transform .35s;
+}
+
+.skill-group:hover {
+  border-color: rgba(85,226,203,.34);
+  box-shadow: 0 20px 55px rgba(0,0,0,.2);
+}

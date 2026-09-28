@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Virendra Voice Tabs - Confirm & Open",
+  "version": "2.0.0",
+  "description": "Opens preapproved portfolio links in a separate tab after an explicit spoken confirmation. Local portfolio only.",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}

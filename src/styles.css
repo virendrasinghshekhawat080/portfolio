@@ -1,0 +1,17 @@
+/* Shared design tokens, typography, accessibility and keyframes first. */
+@import "./styles/globals.css";
+/* Component CSS is independent: edit only the section you need. */
+@import "./styles/Header.css";
+@import "./styles/Hero.css";
+@import "./styles/HomeHighlights.css";
+@import "./styles/Ticker.css";
+@import "./styles/About.css";
+@import "./styles/Skills.css";
+@import "./styles/Projects.css";
+@import "./styles/Experience.css";
+@import "./styles/ContactTeaser.css";
+@import "./styles/ContactPage.css";
+@import "./styles/Footer.css";
+@import "./styles/Voice.css";
+@import "./styles/Agent.css";
+@import "./styles/Motion.css";

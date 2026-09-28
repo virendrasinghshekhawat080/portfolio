@@ -1,0 +1,37 @@
+/* Ticker: edit this file to customize this section. */
+
+.ticker {
+  overflow: hidden;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(17,26,48,.6);
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 42px;
+  animation: marquee 31s linear infinite;
+}
+
+.ticker-track span {
+  font-family: "Space Grotesk";
+  letter-spacing: 2.3px;
+  font-weight: 700;
+  color: #c3cce1;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.ticker-track b {
+  color: var(--aqua);
+  font-size: 18px;
+}
+
+.ticker-track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 42px;
+}

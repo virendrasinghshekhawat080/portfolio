@@ -1,0 +1,404 @@
+/* About: edit this file to customize this section. */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 20px;
+}
+
+.about-main {
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.corner-label {
+  font: 12px monospace;
+  color: var(--aqua);
+}
+
+.about-main h3 {
+  font-family: "Space Grotesk";
+  font-size: 29px;
+  letter-spacing: -1px;
+  line-height: 1.26;
+  max-width: 460px;
+  margin: 22px 0;
+}
+
+.about-main p {
+  color: var(--muted);
+  line-height: 1.85;
+  font-size: 14.5px;
+}
+
+.text-link {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--aqua);
+  display: inline-flex;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.text-link span {
+  transition: transform .25s;
+}
+
+.text-link:hover span {
+  transform: translate(4px,-4px);
+}
+
+.about-side {
+  display: grid;
+  gap: 16px;
+}
+
+.mini-card {
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 29px;
+  min-height: 131px;
+  transition: transform .3s,border-color .3s;
+}
+
+.mini-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(88,225,203,.35);
+}
+
+.mini-icon {
+  font-size: 25px;
+  color: var(--aqua);
+  margin-bottom: 6px;
+}
+
+.mini-card strong {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+}
+
+.mini-card small {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.mini-card.reveal.visible:hover {
+  transform: translateY(-7px);
+}
+
+@media (max-width:760px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:760px) {
+  .about-main {
+    padding: 28px;
+  }
+}
+
+@media (max-width:760px) {
+  .about-side {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 9px;
+  }
+}
+
+@media (max-width:760px) {
+  .mini-card {
+    padding: 13px;
+    min-height: 125px;
+  }
+}
+
+@media (max-width:760px) {
+  .mini-card strong {
+    font-size: 13px;
+  }
+}
+
+@media (max-width:760px) {
+  .mini-card small {
+    font-size: 10px;
+  }
+}
+
+@media (max-width:760px) {
+  .mini-icon {
+    font-size: 19px;
+  }
+}
+
+@media (max-width:420px) {
+  .about-side {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:420px) {
+  .mini-card {
+    min-height: 90px;
+  }
+}
+
+.mini-card {
+  transition: border-color .35s,box-shadow .35s,transform .35s;
+}
+
+.mini-card:hover {
+  border-color: rgba(85,226,203,.34);
+  box-shadow: 0 20px 55px rgba(0,0,0,.2);
+}
+
+.about .section-heading {
+  max-width: 860px;
+}
+
+.about-grid {
+  grid-template-columns: minmax(0,1.48fr) minmax(260px,.85fr);
+  gap: 20px;
+}
+
+.about-main {
+  padding: clamp(25px,3vw,42px);
+}
+
+.about-main h3 {
+  font-size: clamp(23px,2.2vw,32px);
+  line-height: 1.26;
+  letter-spacing: -1px;
+}
+
+.about-main p {
+  line-height: 1.85;
+  font-size: 14px;
+}
+
+.about-side {
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 14px;
+}
+
+.about-side .mini-card {
+  padding: 21px 18px;
+  min-height: 144px;
+  gap: 5px;
+}
+
+.about-side .mini-card strong {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.about-side .mini-card small {
+  line-height: 1.55;
+}
+
+.about-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 23px 0;
+}
+
+.about-keywords span {
+  border: 1px solid rgba(85,226,203,.22);
+  background: rgba(85,226,203,.07);
+  border-radius: 99px;
+  padding: 8px 11px;
+  color: #c1e6e7;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+  margin-top: 26px;
+}
+
+.about-actions .btn {
+  gap: 8px;
+  padding: 13px 16px;
+}
+
+.about-focus-header {
+  max-width: 760px;
+  margin: 57px 0 26px;
+}
+
+.about-focus-header h3 {
+  font: 700 clamp(25px,2.8vw,37px)/1.2 "Space Grotesk",sans-serif;
+  letter-spacing: -1px;
+  margin: 10px 0;
+}
+
+.about-focus-header p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.about-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 16px;
+}
+
+.about-focus-card {
+  padding: 25px;
+  border-radius: 17px;
+  transition: transform .3s,border-color .3s;
+}
+
+.about-focus-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(85,226,203,.36);
+}
+
+.about-focus-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: #8394b8;
+}
+
+.about-focus-icon {
+  font-size: 24px;
+  color: var(--aqua);
+}
+
+.about-focus-card h4 {
+  font: 700 19px "Space Grotesk",sans-serif;
+  margin: 25px 0 8px;
+}
+
+.about-focus-card p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 13px;
+  margin: 0;
+}
+
+.about-journey {
+  margin-top: 23px;
+  border-radius: 18px;
+  padding: 27px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 26px;
+}
+
+.about-journey h3 {
+  font: 700 clamp(20px,2vw,25px)/1.3 "Space Grotesk",sans-serif;
+  margin: 9px 0;
+}
+
+.about-journey p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 710px;
+  margin-bottom: 0;
+}
+
+.about-journey .btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1050px) {
+  .about-grid {
+    grid-template-columns: minmax(0,1.3fr) minmax(240px,.7fr);
+  }
+}
+
+@media (max-width: 1050px) {
+  .about-side {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1050px) {
+  .about-side .mini-card {
+    min-height: 95px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-side {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .about-side .mini-card {
+    min-height: 110px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-focus-header {
+    margin-top: 45px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-focus-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-focus-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-focus-card h4 {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-journey {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-side {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-side .mini-card {
+    min-height: 90px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-focus-card:hover {
+    transform: none;
+  }
+}

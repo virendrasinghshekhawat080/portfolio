@@ -1,0 +1,142 @@
+/* Home highlights cards. */
+
+.home-highlights {
+  padding: 36px 0 78px;
+  position: relative;
+  background: linear-gradient(180deg,rgba(12,23,44,.24),rgba(8,13,29,0));
+}
+
+.home-highlights-heading {
+  max-width: 720px;
+  margin-bottom: 27px;
+}
+
+.home-highlights-heading h2 {
+  font: 700 clamp(28px,3.2vw,43px)/1.15 "Space Grotesk",sans-serif;
+  letter-spacing: -1.4px;
+  margin: 12px 0;
+}
+
+.home-highlights-heading p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.home-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 16px;
+}
+
+.home-highlight-card {
+  padding: 23px 24px;
+  border-radius: 17px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color .3s,box-shadow .3s,transform .3s;
+}
+
+.home-highlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .45s;
+}
+
+.home-highlight-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(85,226,203,.34);
+  box-shadow: 0 23px 55px rgba(0,0,0,.2);
+}
+
+.home-highlight-card:hover::before {
+  transform: scaleX(1);
+}
+
+.home-highlight-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-highlight-icon {
+  width: 39px;
+  height: 39px;
+  border-radius: 12px;
+  background: rgba(85,226,203,.12);
+  border: 1px solid rgba(85,226,203,.24);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  color: var(--aqua);
+}
+
+.home-highlight-num {
+  font: 700 10px "Space Grotesk",sans-serif;
+  letter-spacing: 2px;
+  color: #8b9ab3;
+}
+
+.home-highlight-card h3 {
+  margin: 20px 0 9px;
+  font: 700 18px "Space Grotesk",sans-serif;
+  letter-spacing: -.4px;
+}
+
+.home-highlight-card p {
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: var(--muted);
+  min-height: 66px;
+  margin: 0 0 14px;
+}
+
+.home-highlight-card a {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--aqua);
+  display: inline-flex;
+  gap: 9px;
+  transition: gap .25s;
+}
+
+.home-highlight-card a:hover {
+  gap: 16px;
+}
+
+@media (max-width: 760px) {
+.home-highlights {
+    padding: 34px 0 56px;
+  }
+}
+
+@media (max-width: 760px) {
+.home-highlight-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+.home-highlight-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 760px) {
+.home-highlight-card p {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+.portrait-card:hover,
+  .home-highlight-card:hover {
+    transform: none;
+  }
+}
